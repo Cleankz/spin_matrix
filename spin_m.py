@@ -2,9 +2,9 @@ def MatrixTurn(matrix,m,n,t):
     matr = []
     for str in range(len(matrix)):
         matr.append(list(matrix[str]))
-    plus = -1
-    minus = 1
     for i in range(t):
+        plus = -1
+        minus = 1
         for circle in range(int((n/2))):
             if plus < m-1:
                 plus += 1
@@ -40,5 +40,3 @@ def MatrixTurn(matrix,m,n,t):
     for s in range(len(matr)):
         matrix.append(''.join((matr[s])))
     return matrix
-    
-print(MatrixTurn(["123456", "234567", "345678", "456789"], 4,6, 2))
